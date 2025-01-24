@@ -49,7 +49,7 @@ exports.getOne = async(req, res) => {
 exports.updateUser = async(req, res) => {
 
   try{
-    const product = await products.findByPK(req.params.id)
+    const product = await products.findByPk(req.params.id)
     if(!product){
       return res.status(404).json('Product not found')
     }
@@ -70,7 +70,7 @@ exports.updateUser = async(req, res) => {
 exports.deleteUser = async(req, res) => {
 
   try{
-    const product = await products.findByPK(req.params.id)
+    const product = await products.findByPk(req.params.id)
     if(!product){
       return res.status(404).json('product not found')
     }
